@@ -1,29 +1,30 @@
-import general from './general';
-import mathematics from './mathematics';
-import technology from './technology';
-import movies from './movies';
-import literature from './literature';
-import geography from './geography';
-import history from './history';
-import science from './science';
-import music from './music';
-import animals from './animals';
-import food from './food';
-import art from './art';
+import general from './general.js';
+import mathematics from './mathematics.js';
+import technology from './technology.js';
+import movies from './movies.js';
+import literature from './literature.js';
+import geography from './geography.js';
+import history from './history.js';
+import science from './science.js';
+import music from './music.js';
+import animals from './animals.js';
+import food from './food.js';
+import art from './art.js';
 
 const puzzles = [
-general,
-mathematics,
-technology,
-movies,
-literature,
-geography,
-history,
-science,
-music,
-animals,
-food,
-art
-]
+  general,
+  mathematics,
+  technology,
+  movies,
+  literature,
+  geography,
+  history,
+  science,
+  music,
+  animals,
+  food,
+  art
+];
 
-export default puzzles
+export default puzzles;
+
