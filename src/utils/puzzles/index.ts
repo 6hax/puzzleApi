@@ -1,4 +1,4 @@
-import general from './general.js';
+import general from './General.js';
 import mathematics from './mathematics.js';
 import technology from './technology.js';
 import literature from './literature.js';
