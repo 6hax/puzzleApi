@@ -1,23 +1,20 @@
 {
   "compilerOptions": {
-    "target": "es2020",                    // Código de saída mais moderno
-    "module": "esnext",                    // Usa ES Module system
-    "outDir": "./dist",                    // Pasta de saída para arquivos compilados
-    "rootDir": "./src",                    // Diretório raiz do código fonte
-    "strict": true,                        // Ativa todas as checagens de tipo rigorosas
-    "moduleResolution": "node",            // Modo de resolução de módulos (para compatibilidade com Node)
-    "esModuleInterop": true,               // Habilita a interoperabilidade com módulos CommonJS
-    "skipLibCheck": true,                  // Ignora checagem de tipos das bibliotecas
-    "forceConsistentCasingInFileNames": true, // Força o uso consistente de maiúsculas/minúsculas nos nomes de arquivos
-    "resolveJsonModule": true,             // Permite importar arquivos .json
-    "allowJs": true,                       // Permite arquivos .js no projeto
-    "sourceMap": true,                     // Gera arquivos .map para depuração
-    "noImplicitAny": true,                 // Impede o uso de `any` implícito
-    "jsx": "react",                        // Configuração para JSX no React
-    "lib": ["dom", "es2020"],              // Usa as bibliotecas de ES2020 e DOM
-    "skipDefaultLibCheck": true            // Ignora a checagem de bibliotecas padrão (ajuda no desempenho)
+    "target": "es2020",                   // Código de saída mais moderno
+    "module": "esnext",                   // Usa ES Module system
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "noImplicitAny": true
   },
-  "include": ["src"],                       // Diretório de entrada do código fonte
-  "exclude": ["node_modules", "dist"]       // Diretórios a serem excluídos da compilação
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }
 
