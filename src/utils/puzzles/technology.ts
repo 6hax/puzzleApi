@@ -19,19 +19,6 @@ const technology = [
     { id: 18, question: "Qual é o nome do sistema operacional do Google?", answer: ["ANDROID", "Android", "android"] },
     { id: 19, question: "Qual é o nome da maior plataforma de jogos online?", answer: ["STEAM", "Steam", "steam"] },
     { id: 20, question: "Quem é conhecido como o 'pai da computação'?", answer: ["ALAN TURING", "Alan Turing", "alan turing"] }
-  ],
-
-  'sports': [
-    { id: 1, question: "Quantos jogadores tem um time de futebol em campo?", answer: ["11", "11"] },
-    { id: 2, question: "Qual país venceu a Copa do Mundo de 2018?", answer: ["FRANCA", "França", "franca"] },
-    { id: 3, question: "Qual esporte é conhecido como 'o esporte rei' no Brasil?", answer: ["FUTEBOL", "Futebol", "futebol"] },
-    { id: 4, question: "Quantos sets tem um jogo de vôlei?", answer: ["5", "5"] },
-    { id: 5, question: "Qual atleta é conhecido como 'Usain Bolt' do Brasil?", answer: ["ROBSON CAETANO", "Robson Caetano", "robson caetano"] },
-    { id: 6, question: "Qual é o esporte mais popular nos Estados Unidos?", answer: ["FOOTBALL AMERICANO", "Football Americano", "football americano"] },
-    { id: 7, question: "Quantas medalhas de ouro Neymar tem com a seleção brasileira?", answer: ["1", "1"] },
-    { id: 8, question: "Qual é o único time brasileiro que nunca foi rebaixado?", answer: ["SAO PAULO", "São Paulo", "sao paulo"] },
-    { id: 9, question: "Qual esporte usa uma raquete e uma peteca?", answer: ["BADMINTON", "Badminton", "badminton"] },
-    { id: 10, question: "Quantos jogadores tem um time de basquete em quadra?", answer: ["5", "5"] }
-  
   ]
+
   export default technology
