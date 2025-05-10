@@ -1,6 +1,7 @@
 {
-  "name": "puzzeApi",
+  "name": "puzzleApi",
   "version": "1.0.0",
+  "github": "https://github.com/slyhax/puzzleApi",
   "description": "simple puzzle Api in TS and Express",
   "type": "module",
   "main": "dist/index.js",
@@ -9,8 +10,7 @@
     "run": "node dist/index.js",
     "dev": "tsc && node dist/index.js"
   },
-  "keywords": [],
-  "author": "Hax",
+  "author": "hax",
   "license": "MIT",
   "dependencies": {
     "@types/react": "^19.1.3",
