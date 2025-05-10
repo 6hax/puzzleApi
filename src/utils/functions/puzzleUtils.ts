@@ -17,32 +17,32 @@ export async function getCategories(): Promise<string> {
 }
 
 export async function getRandomQuestionFromAnyCategory(): Promise<CategoryResponse> {
-  const categories = Object.keys(puzzles);
-  const randomCategory = categories[Math.floor(Math.random() * categories.length)] as keyof typeof puzzles;
+  const categories = Object.keys(puzzles) as Array<keyof typeof puzzles>;
+  const randomCategory = categories[Math.floor(Math.random() * categories.length)];
   const questions = puzzles[randomCategory];
   const randomQuestion = questions[Math.floor(Math.random() * questions.length)];
 
   return {
-    category: randomCategory,
+    category: randomCategory.toString(),
     questionObj: randomQuestion
   };
 }
 
 export async function getRandomQuestionFromCategory(categoryName: string): Promise<CategoryResponse | string> {
-  const categoryKey = Object.keys(puzzles).find(
-    key => key.toLowerCase() === categoryName.toLowerCase()
-  ) as keyof typeof puzzles | undefined;
+  const categories = Object.keys(puzzles) as Array<keyof typeof puzzles>;
+  const categoryKey = categories.find(
+    key => key.toString().toLowerCase() === categoryName.toLowerCase()
+  );
 
   if (!categoryKey) {
-    return `Category "${categoryName}" not found. Available options: ${Object.keys(puzzles).join(', ')}`;
+    return `Category "${categoryName}" not found. Available options: ${categories.join(', ')}`;
   }
 
   const questions = puzzles[categoryKey];
-  const randomIndex = Math.floor(Math.random() * questions.length);
-  const randomQuestion = questions[randomIndex];
+  const randomQuestion = questions[Math.floor(Math.random() * questions.length)];
 
   return {
-    category: categoryKey,
+    category: categoryKey.toString(),
     questionObj: randomQuestion
   };
 }

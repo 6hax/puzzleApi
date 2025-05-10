@@ -1,7 +1,6 @@
 import general from './general.js';
 import mathematics from './mathematics.js';
 import technology from './technology.js';
-import movies from './movies.js';
 import literature from './literature.js';
 import geography from './geography.js';
 import history from './history.js';
@@ -11,11 +10,10 @@ import animals from './animals.js';
 import food from './food.js';
 import art from './art.js';
 
-const puzzles = [
+const puzzles = {
   general,
   mathematics,
   technology,
-  movies,
   literature,
   geography,
   history,
@@ -24,7 +22,7 @@ const puzzles = [
   animals,
   food,
   art
-];
+};
 
 export default puzzles;
 
