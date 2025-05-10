@@ -10,4 +10,4 @@ const science = [
     { id: 9, question: "Qual é o metal líquido à temperatura ambiente?", answer: ["MERCURIO", "Mercúrio", "mercúrio"] },
     { id: 10, question: "Qual é o nome do processo de divisão celular?", answer: ["MITOSE", "Mitose", "mitose"] }
   ]
-  export default science
+export default science
