@@ -1,0 +1,443 @@
+    :root {
+      --bg-color: #f9fafb;
+      --text-color: #333;
+      --container-bg: #fff;
+      --shadow-color: rgba(0, 0, 0, 0.1);
+      --heading-color: #2b2d42;
+      --code-bg: #f4f4f4;
+      --code-color: #4d4d4d;
+      --border-color: #e4e4e4;
+      --secondary-text: #666;
+      --github-card-bg: #24292f;
+      --github-card-text: #fff;
+      --link-color: #0070f3;
+      --section-bg: transparent;
+    }
+
+    .dark-mode {
+      --bg-color: #1a1a1a;
+      --text-color: #e0e0e0;
+      --container-bg: #2d2d2d;
+      --shadow-color: rgba(0, 0, 0, 0.3);
+      --heading-color: #a0c4ff;
+      --code-bg: #3a3a3a;
+      --code-color: #d0d0d0;
+      --border-color: #444;
+      --secondary-text: #aaa;
+      --github-card-bg: #1f2937;
+      --github-card-text: #f3f4f6;
+      --link-color: #60a5fa;
+      --section-bg: #3a3a3a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      padding: 20px 0;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 95%;
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: var(--container-bg);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px var(--shadow-color);
+    }
+
+    h1, h2, h3 {
+      color: var(--heading-color);
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 25px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border-color);
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-top: 15px;
+      color: var(--link-color);
+    }
+
+    section {
+      margin-bottom: 25px;
+      background-color: var(--section-bg);
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+
+    pre {
+      background-color: var(--code-bg);
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      margin: 12px 0;
+      overflow-x: auto;
+      color: var(--code-color);
+    }
+
+    code {
+      background-color: var(--code-bg);
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      color: var(--code-color);
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 25px;
+      padding-top: 15px;
+      border-top: 2px solid var(--border-color);
+    }
+
+    footer p {
+      color: var(--secondary-text);
+      font-size: 0.9rem;
+    }
+
+    .github-link {
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: var(--github-card-bg);
+      color: var(--github-card-text);
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 1rem;
+      margin-top: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .github-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-section {
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .header-section h1 {
+      font-size: 2rem;
+      margin-top: 40px;
+    }
+
+    .header-section p {
+      font-size: 1rem;
+      color: var(--secondary-text);
+      margin-top: 10px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .github-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-color: var(--github-card-bg);
+      padding: 15px;
+      border-radius: 12px;
+      margin-top: 25px;
+      color: var(--github-card-text);
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+
+    .github-card img {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      margin-right: 0;
+      margin-bottom: 10px;
+      border: 2px solid var(--github-card-text);
+    }
+
+    .github-card div {
+      text-align: center;
+    }
+
+    .github-card div h3 {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+      color: var(--github-card-text);
+    }
+
+    .github-card div p {
+      font-size: 0.9rem;
+      color: var(--github-card-text);
+      opacity: 0.8;
+      margin-bottom: 10px;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background: var(--code-bg);
+      border: none;
+      padding: 6px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      color: var(--text-color);
+      font-weight: bold;
+      font-size: 0.8rem;
+      z-index: 100;
+    }
+
+    .theme-toggle svg {
+      margin-right: 5px;
+      width: 12px;
+      height: 12px;
+    }
+
+    .endpoint {
+      background-color: var(--section-bg);
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .endpoint-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .method {
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-weight: bold;
+      margin-right: 8px;
+      font-size: 0.8rem;
+    }
+
+    .get {
+      background-color: #61affe;
+      color: #000;
+    }
+
+    .post {
+      background-color: #49cc90;
+      color: #000;
+    }
+
+    .put {
+      background-color: #fca130;
+      color: #000;
+    }
+
+    .delete {
+      background-color: #f93e3e;
+      color: #000;
+    }
+
+    .endpoint-url {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.9rem;
+      word-break: break-all;
+    }
+
+    .description {
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    .parameters {
+      margin: 12px 0;
+    }
+
+    .parameter {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+    }
+
+    .parameter-name {
+      font-weight: bold;
+      min-width: 100px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .parameter-type {
+      color: var(--secondary-text);
+      font-style: italic;
+      margin: 0 8px;
+    }
+
+    .response {
+      margin-top: 12px;
+    }
+
+    .response-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+      font-size: 0.95rem;
+    }
+
+    .tab {
+      display: inline-block;
+      margin-left: 15px;
+    }
+
+    .example-request {
+      margin-top: 25px;
+    }
+
+    .example-title {
+      font-weight: bold;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    .curl-request {
+      background-color: var(--code-bg);
+      padding: 12px;
+      border-radius: 8px;
+      font-family: 'Courier New', Courier, monospace;
+      margin-bottom: 8px;
+      font-size: 0.85rem;
+      overflow-x: auto;
+    }
+
+    .response-image {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        padding: 30px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+      }
+
+      .header-section h1 {
+        font-size: 2.5rem;
+        margin-top: 0;
+      }
+
+      .header-section p {
+        font-size: 1.1rem;
+      }
+
+      .github-card {
+        flex-direction: row;
+        text-align: left;
+        padding: 20px;
+      }
+
+      .github-card img {
+        width: 60px;
+        height: 60px;
+        margin-right: 20px;
+        margin-bottom: 0;
+      }
+
+      .github-card div {
+        text-align: left;
+      }
+
+      .github-card div h3 {
+        font-size: 1.3rem;
+      }
+
+      .github-card div p {
+        font-size: 1rem;
+      }
+
+      .theme-toggle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 8px 15px;
+        font-size: 0.9rem;
+      }
+
+      .theme-toggle svg {
+        width: 14px;
+        height: 14px;
+      }
+
+      .method {
+        font-size: 0.9rem;
+      }
+
+      .endpoint-url {
+        font-size: 1rem;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .container {
+        padding: 40px;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      .header-section h1 {
+        font-size: 3rem;
+      }
+
+      .header-section p {
+        font-size: 1.2rem;
+      }
+    }
