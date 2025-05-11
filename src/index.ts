@@ -1,47 +1,21 @@
 import express from "express";
-import cors from "cors";
-import { 
-  getCategories, 
-  getRandomQuestionFromCategory,
-  getRandomQuestionFromAnyCategory
-} from "./utils/functions/puzzleUtils.js";
-import "dotenv/config";
 import path from "path";
-import { fileURLToPath } from 'url';
-
-const app = express();
-const PORT = process.env.PORT;
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+import { routes } from "./routes.js";
+import { PuzzleRoutes } from "./routes/puzzleRoutes.js";
+import "dotenv/config"
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __dirname = dirname(__filename);
+
+const app = express();
+const PORT = process.env.PORT
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 
-app.use(cors());
-
-app.get('/', (_, res) => {
-  res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
-});
-
-app.get('/categories', async (_, res) => {
-  const allCategories = await getCategories();
-  res.status(200).json(allCategories);
-});
-
-app.get('/randomPuzzle', async (_, res) => {
-  const puzzle = await getRandomQuestionFromAnyCategory();
-  res.status(200).json(puzzle);
-});
-
-app.get('/randomPuzzleCategory/:category', async (req, res) => {
-  const { category } = req.params;
-  const puzzle = await getRandomQuestionFromCategory(category);
-  res.status(200).json(puzzle);
-});
-
-
-app.get('*', (_, res) => {
-  res.redirect('/');
-});
-
-app.listen(PORT, () => console.log(`🟢 Server rodando na porta ${PORT}`));
+app.use('/puzzle', PuzzleRoutes);
+app.use(routes);
+app.listen(PORT, () => console.log(`🔥 Servidor rodando na porta ${PORT}!`));
 
