@@ -41,7 +41,7 @@ API simples e leve para manipulação de puzzles. Feita com TypeScript e Express
 ## 📖 Endpoints
 
 
-### 📥 `GET /randomPuzzle`
+### 📥 `GET /puzzle/randomPuzzle`
 
 - **Descrição:** Retorna um puzzle aleatório.
 - **Resposta:**
@@ -61,7 +61,7 @@ API simples e leve para manipulação de puzzles. Feita com TypeScript e Express
 
 ---
 
-### 📥 `GET /randomPuzzleCategory/:category`
+### 📥 `GET /puzzle/randomPuzzleCategory/:category`
 
 - **Descrição:** Retorna um puzzle aleatório de uma categoria especifica.
 - **Resposta:**
@@ -82,7 +82,7 @@ API simples e leve para manipulação de puzzles. Feita com TypeScript e Express
   
 ---
 
-### 📥 `GET /categories`
+### 📥 `GET /puzzle/categories`
 
 - **Descrição:** Retorna todas as categorias.
 - **Resposta:**
