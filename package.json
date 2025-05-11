@@ -6,9 +6,9 @@
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc && cpx \"public/**/*\" dist/public",
-    "run": "node dist/index.js",
-    "dev": "npm run build && npm run run"
+"build": "tsc && cpx \"public/**/*\" dist/public",
+"run": "node dist/index.js",
+"dev": "npm run build && npm run run"
   },
   "author": "hax",
   "license": "MIT",
