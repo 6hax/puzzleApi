@@ -61,7 +61,7 @@ API simples e leve para manipulação de puzzles. Feita com TypeScript e Express
 
 ---
 
-### 📥 `GET /puzzle/randomPuzzleCategory/:category`
+### 📥 `GET /puzzle/puzzleByCategory/:category`
 
 - **Descrição:** Retorna um puzzle aleatório de uma categoria especifica.
 - **Resposta:**
@@ -82,7 +82,7 @@ API simples e leve para manipulação de puzzles. Feita com TypeScript e Express
   
 ---
 
-### 📥 `GET /puzzle/categories`
+### 📥 `GET /puzzle/listCategories`
 
 - **Descrição:** Retorna todas as categorias.
 - **Resposta:**
