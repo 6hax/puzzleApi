@@ -17,7 +17,7 @@ API simples e leve para manipulação de puzzles. Feita com TypeScript e Express
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/slyhax/puzzleApi.git
+   git clone https://github.com/emptyhax/puzzleApi.git
    cd puzzleApi
    ```
 
