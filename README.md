@@ -87,7 +87,7 @@ API simples e leve para manipulação de puzzles. Feita com TypeScript e Express
 - **Descrição:** Retorna todas as categorias.
 - **Resposta:**
   ```json
-  {"general, mathematics, technology, literature, geography, history, science, music, ..."}
+  "general, mathematics, technology, literature, geography, history, science, music, ..."
   ```
 ---
 
