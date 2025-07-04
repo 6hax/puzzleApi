@@ -100,4 +100,4 @@ A documentação HTML personalizada acompanha tema light/dark inspirado no layou
 
 ---
 
-> Feito com 💙 por [hax](https://github.com/emptyhax).
+> Feito com 💙 por [hax](https://github.com/6hax).
